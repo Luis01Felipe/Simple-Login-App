@@ -12,6 +12,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics.Metrics;
 using System.Globalization;
 using MySql.Data.MySqlClient;
+using System.Net.Mail;
+using System.Net;
 
 namespace Simple_Login_App
 {
@@ -24,15 +26,17 @@ namespace Simple_Login_App
 
         private void SignupButton_Click(object sender, EventArgs e)
         {
-            if(NameBox.Text == "" || LastnameBox.Text == "" || TelephoneBox.Text == "" || MailBox.Text == "" || PassBox.Text == "")
+            if(NameBox.Text == "" || MailBox.Text == "" || PassBox.Text == "")
             {
                 MessageBox.Show("Por favor, preencha todos os campos.");
                 return;
             }
+            sendMail();
 
             Console.WriteLine("Connecting to MySQL...");
             string connStr = "Server=sql10.freemysqlhosting.net;Port=3306;Database=sql10683041;User ID=sql10683041;Password=vFT6IDUSbb;";
             MySqlConnection conn = new MySqlConnection(connStr);
+            
             try
             {
                 Console.WriteLine("Conferindo cadastro...");
@@ -58,6 +62,8 @@ namespace Simple_Login_App
 
             conn.Close();
             Console.WriteLine("Done.");
+            Login login = new Login();
+            login.Show();
         }
 
         private void TelephoneBox_Leave(object sender, EventArgs e)
@@ -93,6 +99,40 @@ namespace Simple_Login_App
         private void LastnameBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             NameBox_KeyPress(sender, e);
+        }
+
+        private void sendMail()
+        {
+            try
+            {
+                MailMessage mm = new MailMessage();
+                SmtpClient sc = new SmtpClient("smtp.gmail.com");
+                mm.From = new MailAddress("emailformyapps6@gmail.com");
+                mm.To.Add(MailBox.Text);
+                mm.Subject = "Cadastro no Simple-Login-App em andamento";
+                mm.Body = "Olá, vejo que está tentando cadastrar-se no app. aqui está seu codigo de verificação: {código}, abra o app e o confirme por gentileza.";
+                sc.Port = 587;
+                sc.Credentials = new NetworkCredential("emailformyapps6@gmail.com", "kdwy rrye gkyc rzsd");
+                sc.EnableSsl = true;
+                sc.Send(mm);
+                MessageBox.Show("Email sent");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void Signup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

@@ -41,11 +41,12 @@
             this.TelephoneLabel = new System.Windows.Forms.Label();
             this.BorndateDatepicker = new System.Windows.Forms.DateTimePicker();
             this.TelephoneBox = new System.Windows.Forms.TextBox();
+            this.ReturnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MailBox
             // 
-            this.MailBox.Location = new System.Drawing.Point(238, 184);
+            this.MailBox.Location = new System.Drawing.Point(186, 167);
             this.MailBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MailBox.MaxLength = 50;
             this.MailBox.Name = "MailBox";
@@ -54,7 +55,7 @@
             // 
             // PassBox
             // 
-            this.PassBox.Location = new System.Drawing.Point(238, 210);
+            this.PassBox.Location = new System.Drawing.Point(186, 193);
             this.PassBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PassBox.MaxLength = 20;
             this.PassBox.Name = "PassBox";
@@ -67,7 +68,7 @@
             this.MailLabel.AutoSize = true;
             this.MailLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.MailLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MailLabel.Location = new System.Drawing.Point(185, 187);
+            this.MailLabel.Location = new System.Drawing.Point(133, 170);
             this.MailLabel.Name = "MailLabel";
             this.MailLabel.Size = new System.Drawing.Size(48, 16);
             this.MailLabel.TabIndex = 2;
@@ -78,7 +79,7 @@
             this.PassLabel.AutoSize = true;
             this.PassLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PassLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.PassLabel.Location = new System.Drawing.Point(183, 213);
+            this.PassLabel.Location = new System.Drawing.Point(131, 196);
             this.PassLabel.Name = "PassLabel";
             this.PassLabel.Size = new System.Drawing.Size(49, 16);
             this.PassLabel.TabIndex = 3;
@@ -89,7 +90,7 @@
             this.NameLabel.AutoSize = true;
             this.NameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.NameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.NameLabel.Location = new System.Drawing.Point(185, 82);
+            this.NameLabel.Location = new System.Drawing.Point(133, 65);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(47, 16);
             this.NameLabel.TabIndex = 5;
@@ -97,7 +98,7 @@
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(238, 79);
+            this.NameBox.Location = new System.Drawing.Point(186, 62);
             this.NameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NameBox.MaxLength = 50;
             this.NameBox.Name = "NameBox";
@@ -110,7 +111,7 @@
             this.LastnameLabel.AutoSize = true;
             this.LastnameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LastnameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.LastnameLabel.Location = new System.Drawing.Point(151, 108);
+            this.LastnameLabel.Location = new System.Drawing.Point(99, 91);
             this.LastnameLabel.Name = "LastnameLabel";
             this.LastnameLabel.Size = new System.Drawing.Size(81, 16);
             this.LastnameLabel.TabIndex = 7;
@@ -118,7 +119,7 @@
             // 
             // LastnameBox
             // 
-            this.LastnameBox.Location = new System.Drawing.Point(238, 105);
+            this.LastnameBox.Location = new System.Drawing.Point(186, 88);
             this.LastnameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LastnameBox.MaxLength = 50;
             this.LastnameBox.Name = "LastnameBox";
@@ -132,10 +133,10 @@
             this.SignupButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.SignupButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SignupButton.Location = new System.Drawing.Point(154, 255);
+            this.SignupButton.Location = new System.Drawing.Point(242, 231);
             this.SignupButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SignupButton.Name = "SignupButton";
-            this.SignupButton.Size = new System.Drawing.Size(267, 38);
+            this.SignupButton.Size = new System.Drawing.Size(124, 38);
             this.SignupButton.TabIndex = 8;
             this.SignupButton.Text = "Realizar Cadastro";
             this.SignupButton.UseVisualStyleBackColor = false;
@@ -146,7 +147,7 @@
             this.BorndateLabel.AutoSize = true;
             this.BorndateLabel.BackColor = System.Drawing.Color.Transparent;
             this.BorndateLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.BorndateLabel.Location = new System.Drawing.Point(150, 134);
+            this.BorndateLabel.Location = new System.Drawing.Point(98, 117);
             this.BorndateLabel.Name = "BorndateLabel";
             this.BorndateLabel.Size = new System.Drawing.Size(82, 16);
             this.BorndateLabel.TabIndex = 10;
@@ -157,7 +158,7 @@
             this.TelephoneLabel.AutoSize = true;
             this.TelephoneLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TelephoneLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.TelephoneLabel.Location = new System.Drawing.Point(168, 161);
+            this.TelephoneLabel.Location = new System.Drawing.Point(116, 144);
             this.TelephoneLabel.Name = "TelephoneLabel";
             this.TelephoneLabel.Size = new System.Drawing.Size(64, 16);
             this.TelephoneLabel.TabIndex = 13;
@@ -167,14 +168,14 @@
             // 
             this.BorndateDatepicker.CalendarMonthBackground = System.Drawing.SystemColors.Highlight;
             this.BorndateDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BorndateDatepicker.Location = new System.Drawing.Point(238, 131);
+            this.BorndateDatepicker.Location = new System.Drawing.Point(186, 114);
             this.BorndateDatepicker.Name = "BorndateDatepicker";
             this.BorndateDatepicker.Size = new System.Drawing.Size(100, 22);
             this.BorndateDatepicker.TabIndex = 14;
             // 
             // TelephoneBox
             // 
-            this.TelephoneBox.Location = new System.Drawing.Point(238, 158);
+            this.TelephoneBox.Location = new System.Drawing.Point(186, 141);
             this.TelephoneBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TelephoneBox.MaxLength = 11;
             this.TelephoneBox.Name = "TelephoneBox";
@@ -183,12 +184,28 @@
             this.TelephoneBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelephoneBox_KeyPress);
             this.TelephoneBox.Leave += new System.EventHandler(this.TelephoneBox_Leave);
             // 
+            // ReturnButton
+            // 
+            this.ReturnButton.BackColor = System.Drawing.Color.Brown;
+            this.ReturnButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReturnButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ReturnButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ReturnButton.Location = new System.Drawing.Point(101, 231);
+            this.ReturnButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(124, 38);
+            this.ReturnButton.TabIndex = 16;
+            this.ReturnButton.Text = "Voltar";
+            this.ReturnButton.UseVisualStyleBackColor = false;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(573, 362);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.ClientSize = new System.Drawing.Size(482, 333);
+            this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.TelephoneBox);
             this.Controls.Add(this.BorndateDatepicker);
             this.Controls.Add(this.TelephoneLabel);
@@ -205,6 +222,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Signup";
             this.Text = "Signup";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Signup_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +243,6 @@
         private System.Windows.Forms.Label TelephoneLabel;
         private System.Windows.Forms.DateTimePicker BorndateDatepicker;
         public System.Windows.Forms.TextBox TelephoneBox;
+        private System.Windows.Forms.Button ReturnButton;
     }
 }

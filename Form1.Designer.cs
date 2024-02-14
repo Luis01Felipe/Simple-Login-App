@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button LoginButton;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.MailBox = new System.Windows.Forms.TextBox();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.PassBox = new System.Windows.Forms.TextBox();
@@ -38,7 +36,6 @@
             this.PassLabel = new System.Windows.Forms.Label();
             this.SignupLabel = new System.Windows.Forms.Label();
             this.ViewpassCheckbox = new System.Windows.Forms.CheckBox();
-            this.PasscheckImagelist = new System.Windows.Forms.ImageList(this.components);
             LoginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -78,7 +75,7 @@
             // 
             this.PassBox.Location = new System.Drawing.Point(235, 180);
             this.PassBox.Name = "PassBox";
-            this.PassBox.PasswordChar = '*';
+            this.PassBox.PasswordChar = '•';
             this.PassBox.Size = new System.Drawing.Size(280, 22);
             this.PassBox.TabIndex = 2;
             this.PassBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PassEnterKey);
@@ -120,36 +117,22 @@
             // 
             // ViewpassCheckbox
             // 
-            this.ViewpassCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ViewpassCheckbox.Appearance = System.Windows.Forms.Appearance.Button;
             this.ViewpassCheckbox.AutoSize = true;
-            this.ViewpassCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.ViewpassCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewpassCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ViewpassCheckbox.ImageIndex = 0;
-            this.ViewpassCheckbox.ImageList = this.PasscheckImagelist;
-            this.ViewpassCheckbox.Location = new System.Drawing.Point(521, 180);
+            this.ViewpassCheckbox.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ViewpassCheckbox.Location = new System.Drawing.Point(521, 182);
             this.ViewpassCheckbox.Name = "ViewpassCheckbox";
-            this.ViewpassCheckbox.Size = new System.Drawing.Size(22, 22);
+            this.ViewpassCheckbox.Size = new System.Drawing.Size(116, 20);
             this.ViewpassCheckbox.TabIndex = 7;
-            this.ViewpassCheckbox.UseVisualStyleBackColor = false;
+            this.ViewpassCheckbox.Text = "Mostrar Senha";
+            this.ViewpassCheckbox.UseVisualStyleBackColor = true;
             this.ViewpassCheckbox.CheckedChanged += new System.EventHandler(this.ViewpassCheckbox_CheckedChanged);
-            // 
-            // PasscheckImagelist
-            // 
-            this.PasscheckImagelist.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("PasscheckImagelist.ImageStream")));
-            this.PasscheckImagelist.TransparentColor = System.Drawing.Color.Transparent;
-            this.PasscheckImagelist.Images.SetKeyName(0, "ViewPassFalse (Personalizado).png");
-            this.PasscheckImagelist.Images.SetKeyName(1, "ViewPassTrue (Personalizado).png");
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(734, 332);
+            this.ClientSize = new System.Drawing.Size(732, 333);
             this.Controls.Add(this.ViewpassCheckbox);
             this.Controls.Add(this.SignupLabel);
             this.Controls.Add(LoginButton);
@@ -161,6 +144,7 @@
             this.Location = new System.Drawing.Point(960, 540);
             this.Name = "Login";
             this.Text = "Login Screen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +159,6 @@
         private System.Windows.Forms.Label PassLabel;
         private System.Windows.Forms.Label SignupLabel;
         private System.Windows.Forms.CheckBox ViewpassCheckbox;
-        public System.Windows.Forms.ImageList PasscheckImagelist;
     }
 }
 

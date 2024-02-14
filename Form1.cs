@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Simple_Login_App
 {
@@ -17,7 +19,7 @@ namespace Simple_Login_App
             cadastro.Show();
             cadastro.MailBox.Text = MailBox.Text;
             cadastro.PassBox.Text = PassBox.Text;
-            //this.Hide();
+            this.Hide();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -71,8 +73,21 @@ namespace Simple_Login_App
 
         private void ViewpassCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            PassBox.PasswordChar = ViewpassCheckbox.Checked ? '\0' : '*';
-            ViewpassCheckbox.ImageIndex = ViewpassCheckbox.Checked ? 1 : 0;
+            if (ViewpassCheckbox.Checked)
+            {
+                PassBox.PasswordChar = '\0';
+                ViewpassCheckbox.Text = "Esconder senha";
+            }
+            else
+            {
+                PassBox.PasswordChar = '•';
+                ViewpassCheckbox.Text = "Mostrar senha";
+            }
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }
