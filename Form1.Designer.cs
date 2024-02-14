@@ -46,11 +46,11 @@
             // 
             LoginButton.BackColor = System.Drawing.Color.Indigo;
             LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             LoginButton.ForeColor = System.Drawing.SystemColors.ControlLight;
-            LoginButton.Location = new System.Drawing.Point(374, 316);
-            LoginButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            LoginButton.Location = new System.Drawing.Point(332, 253);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new System.Drawing.Size(84, 29);
+            LoginButton.Size = new System.Drawing.Size(75, 23);
             LoginButton.TabIndex = 5;
             LoginButton.Text = "Logar";
             LoginButton.UseVisualStyleBackColor = false;
@@ -58,10 +58,9 @@
             // 
             // MailBox
             // 
-            this.MailBox.Location = new System.Drawing.Point(264, 190);
-            this.MailBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MailBox.Location = new System.Drawing.Point(235, 152);
             this.MailBox.Name = "MailBox";
-            this.MailBox.Size = new System.Drawing.Size(314, 26);
+            this.MailBox.Size = new System.Drawing.Size(280, 22);
             this.MailBox.TabIndex = 0;
             // 
             // IntroLabel
@@ -69,19 +68,18 @@
             this.IntroLabel.AutoSize = true;
             this.IntroLabel.BackColor = System.Drawing.Color.Transparent;
             this.IntroLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.IntroLabel.Location = new System.Drawing.Point(169, 94);
+            this.IntroLabel.Location = new System.Drawing.Point(150, 75);
             this.IntroLabel.Name = "IntroLabel";
-            this.IntroLabel.Size = new System.Drawing.Size(543, 20);
+            this.IntroLabel.Size = new System.Drawing.Size(462, 16);
             this.IntroLabel.TabIndex = 1;
             this.IntroLabel.Text = "Olá, seja bem vindo ao meu app, por favor, faça login ou cadastre-se no app";
             // 
             // PassBox
             // 
-            this.PassBox.Location = new System.Drawing.Point(264, 225);
-            this.PassBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PassBox.Location = new System.Drawing.Point(235, 180);
             this.PassBox.Name = "PassBox";
             this.PassBox.PasswordChar = '*';
-            this.PassBox.Size = new System.Drawing.Size(314, 26);
+            this.PassBox.Size = new System.Drawing.Size(280, 22);
             this.PassBox.TabIndex = 2;
             this.PassBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PassEnterKey);
             // 
@@ -90,9 +88,9 @@
             this.MailLabel.AutoSize = true;
             this.MailLabel.BackColor = System.Drawing.Color.Transparent;
             this.MailLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MailLabel.Location = new System.Drawing.Point(204, 194);
+            this.MailLabel.Location = new System.Drawing.Point(181, 155);
             this.MailLabel.Name = "MailLabel";
-            this.MailLabel.Size = new System.Drawing.Size(57, 20);
+            this.MailLabel.Size = new System.Drawing.Size(48, 16);
             this.MailLabel.TabIndex = 3;
             this.MailLabel.Text = "E-mail:";
             // 
@@ -101,9 +99,9 @@
             this.PassLabel.AutoSize = true;
             this.PassLabel.BackColor = System.Drawing.Color.Transparent;
             this.PassLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.PassLabel.Location = new System.Drawing.Point(202, 229);
+            this.PassLabel.Location = new System.Drawing.Point(180, 183);
             this.PassLabel.Name = "PassLabel";
-            this.PassLabel.Size = new System.Drawing.Size(60, 20);
+            this.PassLabel.Size = new System.Drawing.Size(49, 16);
             this.PassLabel.TabIndex = 4;
             this.PassLabel.Text = "Senha:";
             // 
@@ -113,9 +111,9 @@
             this.SignupLabel.BackColor = System.Drawing.Color.Transparent;
             this.SignupLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignupLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.SignupLabel.Location = new System.Drawing.Point(254, 272);
+            this.SignupLabel.Location = new System.Drawing.Point(226, 218);
             this.SignupLabel.Name = "SignupLabel";
-            this.SignupLabel.Size = new System.Drawing.Size(344, 20);
+            this.SignupLabel.Size = new System.Drawing.Size(289, 16);
             this.SignupLabel.TabIndex = 6;
             this.SignupLabel.Text = "Não tem uma conta? Clique aqui e cadastre-se.";
             this.SignupLabel.Click += new System.EventHandler(this.SignupLabel_Click);
@@ -132,8 +130,7 @@
             this.ViewpassCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewpassCheckbox.ImageIndex = 0;
             this.ViewpassCheckbox.ImageList = this.PasscheckImagelist;
-            this.ViewpassCheckbox.Location = new System.Drawing.Point(586, 225);
-            this.ViewpassCheckbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ViewpassCheckbox.Location = new System.Drawing.Point(521, 180);
             this.ViewpassCheckbox.Name = "ViewpassCheckbox";
             this.ViewpassCheckbox.Size = new System.Drawing.Size(22, 22);
             this.ViewpassCheckbox.TabIndex = 7;
@@ -149,10 +146,10 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(826, 415);
+            this.ClientSize = new System.Drawing.Size(734, 332);
             this.Controls.Add(this.ViewpassCheckbox);
             this.Controls.Add(this.SignupLabel);
             this.Controls.Add(LoginButton);
@@ -162,7 +159,6 @@
             this.Controls.Add(this.IntroLabel);
             this.Controls.Add(this.MailBox);
             this.Location = new System.Drawing.Point(960, 540);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.Text = "Login Screen";
             this.ResumeLayout(false);
