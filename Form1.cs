@@ -37,10 +37,6 @@ namespace Simple_Login_App
                 cmd.Parameters.AddWithValue("@Email", MailBox.Text);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
-                if (!rdr.HasRows)
-                {
-                    MessageBox.Show("Email não registrado!");
-                }
                 rdr.Read();
                 string senhaRetornada = rdr["Senha"].ToString();
 
@@ -50,8 +46,9 @@ namespace Simple_Login_App
                 }
                 else
                 {
-                    MessageBox.Show("Senha incorreta!");
+                    MessageBox.Show("E-mail ou Senha incorretos!");
                 }
+
                 rdr.Close();
             }
             catch (Exception ex)
